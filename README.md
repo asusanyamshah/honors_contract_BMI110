@@ -15,7 +15,7 @@ My job was to train a model, which, when provided specific values from the user 
 
 # Explanation of the steps
 
-### Data Proprocessing
+### Data Preprocessing
 
 
 First we import the libraries that are required. We will use os to determine the path of the file, numpy and pandas to manipulate data, matplotlib to visualize data, sklearn to make models and train the data and imblearn to reduce overfitting of the data.
@@ -41,5 +41,13 @@ We make the model predict the values of x_test and store the predictions in a va
 
 We use matplotlib's pyplot function to plot a heatmap for the confusion matrix. We use plt.imshow to generate a heatmap by passing the confusion matrix and the color we need the heatmap to be as the arguments. plt.colorbar just provides a colorbar to the right and plt.show is just a way to conclude the graph or the heatmap, to update the heatmap for every value of x or y being changed and to actually show the graph in a interactive window. 
 
+
+# Entering our own data
+
+
+We now can enter our own data and make the already trained model to predict what the chance of a person having a stroke can be. However, the tricky part will be to provide our data to the model since the model expects us to provide data in a transformed way and of the same dimensions as provided before. So we will need to preprocess the data again. 
+
+
+We first enter our data in form of a list and use np.array(list).reshape(1, -1) to make the data in form of a row nad not the column and also transform it into a 2d array, which the model expects. We then transform the data, or encode the categorical values of the data using the same transformer we used earlier. It is imperative to use the transformer we created earlier since it had already been fitted to the x values we provided earlier and now has the information to transform the data we provided it into the same form that it converted or transformed the x into. We then use the classifier.predict function to predict the results and store it in a variable. Now the final step will be to print out the result in a human readable form, since we will get the output in form of either 1 inside of a list or 0 inside of a list. This is quite easy and we can do this using conditionals and if statements. We can say that if the first element of the output is 1 then print out that you do have a chance of having a stroke or else print out that you do not have a chance of having a stroke. 
 
 
