@@ -42,7 +42,7 @@ We make the model predict the values of x_test and store the predictions in a va
 We use matplotlib's pyplot function to plot a heatmap for the confusion matrix. We use 'plt.imshow' to generate a heatmap by passing the confusion matrix and the color we need the heatmap to be as the parameters. 'plt.colorbar' just provides a colorbar to the right and 'plt.show' is just a way to conclude the graph or the heatmap, to update the heatmap for every value of x or y being changed and to actually show the graph in a interactive window. 
 
 
-# Entering our own data
+# Entering your own data
 
 
 We now can enter our own data and make the already trained model to predict what the chance of a person having a stroke can be. However, the tricky part will be to provide our data to the model since the model expects us to provide data in a transformed way and of the same dimensions as provided before. So we will need to preprocess the data again. 
